@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTypo3, FaTimes, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
@@ -24,13 +24,17 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    showButton();
+  }, []);
+
   window.addEventListener("resize", showButton);
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             TRIPPY <FaTypo3 className="iconLogo" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
