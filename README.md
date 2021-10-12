@@ -4,4 +4,4 @@ SPA for a Travel Agency company using React.
 
 ## Preview:
 
-![Preview](/public/preview.png)
+![Preview](/public/preview.PNG)
